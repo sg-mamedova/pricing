@@ -1,0 +1,329 @@
+@import "../../../uikit/light/vars.css";
+@import "../../../uikit/media.css";
+@import "../../../uikit/light/buttons.css";
+
+.section {
+  min-width: 320px;
+  padding: 40px 0;
+
+  /* background-color: var(--ui-block-bg); */
+  font-size: var(--ui-text-size);
+  font-family: var(--ui-text-font-family);
+  color: var(--ui-text-color);
+  line-height: var(--ui-text-line-height);
+  font-weight: var(--ui-text-font-weight);
+  word-wrap: break-word;
+
+  &--no-icon {
+
+    @media (--ui-tablet-devices) {
+      .plan--main {
+        .plan__title {
+          margin-bottom: 35px;
+        }
+
+        .plan__button {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  @media (--ui-medium-devices) {
+    padding: 80px 0;
+  }
+
+  &__inner {
+    max-width: var(--ui-content-container);
+    margin: 0 auto;
+    padding: var(--ui-content-gutter);
+  }
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: var(--ui-block-title-font-family);
+  font-size: var(--ui-block-title-size);
+  font-weight: var(--ui-block-title-font-weight);
+  line-height: var(--ui-block-title-line-height);
+  color: var(--ui-block-title-color);
+}
+
+.subtitle {
+  max-width: 688px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--ui-subtitle-font-family);
+  font-size: var(--ui-subtitle-size);
+  font-weight: var(--ui-subtitle-font-weight);
+  line-height: var(--ui-subtitle-line-height);
+  color: var(--ui-subtitle-color);
+
+  @media (--ui-medium-devices) {
+    max-width: 770px;
+  }
+}
+
+.plans-wrapper {
+  display: flex;
+  margin-top: 60px;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (--ui-medium-devices) {
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.plan {
+  padding: 50px 20px;
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #ebeaea;
+
+  @media (--ui-tablet-devices) {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  @media (--ui-medium-devices) {
+    padding: 50px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-family: var(--ui-heading-font-family);
+    font-size: var(--ui-heading-size);
+    font-weight: var(--ui-heading-font-weight);
+    line-height: var(--ui-heading-line-height);
+    color: var(--ui-heading-color);
+  }
+
+  &__icon-wrapper {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: var(--ui-media-bg);
+    color: var(--ui-icon-color);
+  }
+
+  &__price {
+    font-family: var(--ui-caption-font-family);
+    font-size: var(--ui-caption-size);
+    font-weight: var(--ui-caption-font-weight);
+    line-height: var(--ui-caption-line-height);
+    color: var(--ui-caption-color);
+    margin-bottom: 30px;
+
+    &-count {
+      display: block;
+      font-family: var(--ui-heading-lg-font-family);
+      font-size: var(--ui-heading-lg-size);
+      font-weight: var(--ui-heading-lg-font-weight);
+      line-height: var(--ui-heading-lg-line-height);
+      color: var(--ui-heading-lg-color);
+    }
+  }
+
+  &__list {
+    &-item {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 40px;
+
+    @media (--ui-tablet-devices) {
+      width: auto;
+    }
+  }
+
+  &--main {
+    position: relative;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+
+    @media (--ui-tablet-devices) {
+      margin-top: -20px;
+      margin-bottom: -30px;
+    }
+
+    .plan__title {
+      font-weight: 500;
+    }
+
+    .plan__icon-wrapper {
+      width: 90px;
+      height: 90px;
+    }
+
+    .plan__button {
+      margin-top: 45px;
+    }
+  }
+}
+
+.btns-group {
+  margin-top: 30px;
+  text-align: center;
+
+  @media (--ui-tablet-devices) {
+    margin-top: 90px;
+  }
+
+  .button {
+    width: 100%;
+
+    @media (--ui-phone-devices) {
+      width: auto;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.link {
+  color: var(--ui-link-color);
+  transition: color 0.2s ease-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--ui-link-hover-color);
+  }
+}
+
+/* stylelint-disable */
+.plans-wrapper {
+  margin-top: 80px
+}
+.plan {
+  background-color: var(--ui-media-bg);
+  @media (--ui-medium-devices) {
+    padding: 65px 50px 70px;
+  }
+  &--main {
+    color:  var(--ui-light-shade-color);
+    background-color: var(--ui-brand-color);
+    box-shadow: none;
+    padding: 95px 50px;
+    .plan__icon-wrapper {
+      fill: var(--ui-light-shade-color);
+    }
+    .plan__title {
+       color:  var(--ui-light-shade-color);
+    }
+    .plan__price {
+      margin-top: 20px;
+    }
+    .plan__price-count {
+      color: var(--ui-light-shade-color);
+      &:before {
+        background-color: var(--ui-light-shade-color);
+      }
+    }
+    .plan__price-text {
+      color: #e5a6ba;
+    }
+    .plan__button {
+      color: #323435;
+      background-color: var(--ui-light-shade-color);
+      border-color: var(--ui-light-shade-color);
+      margin-top: 60px;
+      &:hover,
+      &:active {
+         background-color: var(--ui-btn-secondary-hover-bg);
+         color: var(--ui-btn-secondary-hover-color);
+         border-color: var(--ui-btn-secondary-hover-border-color);
+        }
+      }
+
+    @media (--ui-tablet-devices) {
+        margin-top: -30px;
+    }
+  }
+
+  &__icon-wrapper {
+   fill: var(--ui-brand-color);
+   color: var(--ui-brand-color);
+   background-color: transparent;
+   & svg {
+     width: 100%;
+     height: 100%;
+     & path {
+       fill: var(--ui-brand-color);
+       stroke:  var(--ui-brand-color);
+       }
+   }
+  }
+
+  &__price {
+    margin: 35px 0 20px;
+    &-count {
+      font-size: 80px;
+      font-weight: 400;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        margin-left: -15px;
+        background-color: var(--ui-brand-color);
+      }
+    }
+    &-text {
+      text-transform: uppercase;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+  &__list-item {
+    line-height: 1.2;
+  }
+  &__button {
+    margin-top: 60px;
+    padding: 12px 28px;
+  }
+}
+
+.subtitle {
+  color: #838587;
+
+  @media (--ui-medium-devices) {
+    max-width: 830px;
+    margin-top: 35px;
+  }
+}
+
+.btns-group {
+  @media (--ui-tablet-devices) {
+    margin-top: 70px;
+  }
+  button {
+    padding: 12px 20px;
+  }
+}
+
+/* stylelint-enable */
